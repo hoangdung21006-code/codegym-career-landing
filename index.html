@@ -3,57 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản lý nội dung bị tràn với Overflow</title>
+  <title>Thực hành bố cục hai cột bằng Float và Clear</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="page-header">
-    <h1>[Thực hành] Quản lý nội dung bị tràn với Overflow</h1>
+  <header class="header">
+    <div class="wrap">
+      <span class="logo">FLOAT<span>&amp;</span>CLEAR</span>
+      <span class="tagline">Bài thực hành HTML &amp; CSS</span>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="wrap">
     <section class="intro">
-      <h2>Mục đích</h2>
-      <p>Luyện tập sử dụng <strong>overflow</strong> để kiểm soát nội dung bị tràn trong một khối HTML.</p>
-      <h2>Bài toán</h2>
-      <p>Tạo một khối chứa nội dung quá dài, sử dụng <code>overflow</code> để hiển thị thanh cuộn khi cần thiết.</p>
+      <p class="eyebrow">THỰC HÀNH CSS</p>
+      <h1>Bố cục hai cột với <span>Float &amp; Clear</span></h1>
+      <p>Luyện tập sử dụng <strong>float</strong> và <strong>clear</strong> để chia trang web thành hai cột, căn chỉnh nội dung và giữ phần chân trang nằm bên dưới.</p>
     </section>
 
-    <section class="exercise">
-      <h2>Bước 1: Tạo cấu trúc tài liệu HTML</h2>
-      <p class="hint">Khối nội dung bên dưới có chiều cao giới hạn. Hãy thử cuộn bên trong khối.</p>
-      <div class="overflow-box" tabindex="0" aria-label="Khối nội dung có thanh cuộn">
-        <h3>Nội dung minh họa</h3>
-        <p>Đây là một đoạn văn bản dài để kiểm tra cách thuộc tính overflow hoạt động trong CSS. Khi nội dung cao hơn vùng chứa, thanh cuộn sẽ xuất hiện để người dùng xem được toàn bộ nội dung.</p>
-        <p>HTML giúp xây dựng cấu trúc trang web, còn CSS giúp trình bày giao diện. Thuộc tính overflow cho phép kiểm soát phần nội dung vượt ra ngoài kích thước của một phần tử.</p>
-        <p>Với giá trị auto, trình duyệt chỉ hiển thị thanh cuộn khi nội dung thực sự bị tràn. Đây là lựa chọn hữu ích cho hộp thông báo, danh sách dài hoặc khu vực xem nội dung.</p>
-        <p>Hãy tiếp tục cuộn để đọc đoạn cuối. Nội dung dài được thêm vào có chủ đích nhằm làm xuất hiện thanh cuộn dọc trong khối này.</p>
-        <p>Kết thúc nội dung minh họa. Bạn đã thực hành cách sử dụng overflow: auto để quản lý nội dung bị tràn.</p>
-      </div>
+    <div class="container clearfix">
+      <section class="left-column">
+        <span class="label">NỘI DUNG CHÍNH</span>
+        <h2>Khám phá thế giới công nghệ</h2>
+        <p>Đây là cột bên trái, chiếm khoảng 60% chiều rộng khu vực nội dung. Cột này chứa phần thông tin chính của trang web.</p>
+        <div class="feature-card">
+          <div class="feature-icon">✦</div>
+          <div><h3>HTML — Xây dựng cấu trúc</h3><p>HTML giúp tổ chức tiêu đề, đoạn văn, hình ảnh và các thành phần nội dung của website.</p></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✧</div>
+          <div><h3>CSS — Tạo giao diện</h3><p>CSS điều chỉnh màu sắc, khoảng cách, kích thước và cách sắp xếp các phần tử trên trang.</p></div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">↗</div>
+          <div><h3>Float và Clear</h3><p>Thuộc tính float đưa phần tử về bên trái hoặc bên phải; clear giúp phần tử tiếp theo không bị ảnh hưởng bởi các phần tử đang float.</p></div>
+        </div>
+      </section>
 
-      <h2>Bước 2: Định dạng CSS</h2>
-      <pre><code>.overflow-box {
-  width: 100%;
-  max-width: 620px;
-  height: 180px;
-  padding: 16px;
-  background-color: #f0efff;
-  border: 1px solid #d8d2ff;
-  overflow: auto;
-}</code></pre>
-      <p class="result"><strong>📌 Kết quả mong đợi:</strong> Thanh cuộn xuất hiện khi nội dung vượt quá kích thước phần tử nhờ <code>overflow: auto;</code>.</p>
-    </section>
+      <aside class="right-column">
+        <span class="label">SIDEBAR</span>
+        <h2>Thông tin thêm</h2>
+        <p>Cột bên phải chiếm khoảng 38% chiều rộng và hiển thị nội dung phụ.</p>
+        <h3>Chủ đề bài học</h3>
+        <ul>
+          <li>Cấu trúc HTML</li>
+          <li>Thuộc tính float</li>
+          <li>Thuộc tính clear</li>
+          <li>Box sizing</li>
+          <li>Responsive layout</li>
+        </ul>
+        <div class="tip"><strong>Mẹo nhỏ</strong><p>Hai cột có tổng chiều rộng 98%, chừa khoảng trống để bố cục không bị xuống dòng.</p></div>
+      </aside>
+    </div>
 
-    <section class="submit-guide">
-      <h2>Hướng dẫn nộp bài</h2>
-      <ul>
-        <li>Hoàn thành bài thực hành sử dụng <code>overflow</code> để xử lý nội dung bị tràn.</li>
-        <li>Kiểm tra thanh cuộn xuất hiện khi nội dung vượt quá kích thước phần tử.</li>
-        <li>Chụp ảnh kết quả hiển thị trên trình duyệt để nộp bài.</li>
-      </ul>
+    <section class="after-columns">
+      <h2>Phần bên dưới hai cột</h2>
+      <p>Khối này sử dụng <code>clear: both</code> để bắt đầu bên dưới cả cột trái và cột phải. Nhờ đó, footer và nội dung tiếp theo không bị trôi lên cạnh các cột.</p>
     </section>
   </main>
 
-  <footer>© 2026 — Bài thực hành HTML &amp; CSS</footer>
+  <footer class="footer">
+    <div class="wrap clearfix"><span>© 2026 — Bài thực hành Float &amp; Clear</span><a href="#">Về đầu trang ↑</a></div>
+  </footer>
 </body>
 </html>
