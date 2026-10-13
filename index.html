@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ Giản Lược</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="brand">Trang Chủ</div>
+    <nav class="top-nav" aria-label="Điều hướng chính">
+      <a href="#home">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#news">Tin tức</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <div class="page-container" id="home">
+    <aside class="sidebar left-sidebar">
+      <h2>Danh mục</h2>
+      <ul>
+        <li><a href="#home">Tổng quan</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#news">Bài viết mới</a></li>
+        <li><a href="#resources">Tài nguyên</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section class="welcome-card">
+        <p class="eyebrow">CHÀO MỪNG BẠN</p>
+        <h1>Trang chủ giản lược</h1>
+        <p>Đây là giao diện trang chủ mẫu sử dụng HTML5, CSS và Flexbox. Header được cố định ở đầu cửa sổ trình duyệt, hai sidebar nằm ở hai bên và nội dung chính được bố trí ở giữa.</p>
+        <a class="primary-button" href="#about">Tìm hiểu thêm</a>
+      </section>
+
+      <section class="content-section" id="about">
+        <h2>Giới thiệu</h2>
+        <p>Bố cục này minh họa cách chia một trang web thành các khu vực rõ ràng, giúp người dùng dễ dàng điều hướng và đọc nội dung.</p>
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="card-icon">⌘</span>
+            <h3>Cấu trúc rõ ràng</h3>
+            <p>Sử dụng các thẻ ngữ nghĩa như <code>header</code>, <code>main</code> và <code>aside</code>.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-icon">▤</span>
+            <h3>Bố cục linh hoạt</h3>
+            <p>Flexbox giúp sắp xếp sidebar và nội dung chính theo hàng ngang.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-icon">↑</span>
+            <h3>Header cố định</h3>
+            <p>Header luôn hiển thị khi cuộn trang nhờ <code>position: fixed</code>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="news">
+        <h2>Nội dung chính</h2>
+        <article class="post">
+          <h3>Thiết kế giao diện đơn giản</h3>
+          <p>Giao diện sử dụng màu nền nhẹ, khoảng trắng hợp lý, đường viền bo tròn và đổ bóng tinh tế để tăng khả năng đọc.</p>
+          <span class="post-meta">Bài viết mẫu · 5 phút đọc</span>
+        </article>
+        <article class="post">
+          <h3>Sử dụng CSS hiện đại</h3>
+          <p>Các thuộc tính <code>position: fixed</code>, <code>z-index</code>, <code>display: flex</code> và media query được áp dụng để hoàn thiện bố cục.</p>
+          <span class="post-meta">Hướng dẫn · 3 phút đọc</span>
+        </article>
+      </section>
+
+      <section class="content-section" id="resources">
+        <h2>Tài nguyên</h2>
+        <p>Bạn có thể thay đổi nội dung, màu sắc, liên kết và các thẻ thông tin để phù hợp với yêu cầu bài tập của mình.</p>
+      </section>
+
+      <section class="content-section" id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: contact@example.com</p>
+        <p>Đây là thông tin liên hệ minh họa, có thể thay bằng thông tin của bạn.</p>
+      </section>
+      <footer class="page-footer">© 2026 Trang Chủ Giản Lược · Bài thực hành HTML & CSS</footer>
+    </main>
+
+    <aside class="sidebar right-sidebar">
+      <h2>Thông tin thêm</h2>
+      <div class="side-note">
+        <strong>📌 Lưu ý</strong>
+        <p>Header luôn nằm trên cùng khi cuộn trang.</p>
+      </div>
+      <div class="side-note">
+        <strong>💡 Mẹo CSS</strong>
+        <p>Dùng <code>z-index</code> để kiểm soát thứ tự hiển thị.</p>
+      </div>
+      <div class="side-note">
+        <strong>📚 Tài liệu</strong>
+        <p>Ôn tập Flexbox và thuộc tính position.</p>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
