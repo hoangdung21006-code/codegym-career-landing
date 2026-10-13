@@ -1,26 +1,14 @@
-# Trang Chủ Giản Lược
-
-Bài thực hành tạo giao diện trang chủ bằng HTML và CSS.
-
-## Tệp trong dự án
-- `index.html`: cấu trúc trang, header, sidebar trái, nội dung chính và sidebar phải.
-- `style.css`: giao diện, Flexbox, header cố định, z-index và responsive.
+# Bài thực hành: Quản lý nội dung bị tràn với Overflow
 
 ## Cách chạy
 1. Giải nén thư mục.
-2. Mở `index.html` bằng trình duyệt (Chrome/Edge).
-3. Cuộn trang để kiểm tra header vẫn cố định.
+2. Mở `index.html` bằng Chrome.
+3. Cuộn bên trong khối màu tím nhạt để kiểm tra thanh cuộn.
 
-## Đẩy lên GitHub
-Mở Terminal/CMD tại thư mục dự án rồi chạy:
+## Nội dung
+- `index.html`: cấu trúc trang HTML.
+- `style.css`: giao diện, responsive và `overflow: auto`.
+- Khối minh họa có chiều cao giới hạn nên xuất hiện thanh cuộn khi nội dung vượt quá kích thước.
 
-```bash
-git init
-git add index.html style.css README.md
-git commit -m "Create simplified homepage layout"
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin main
-```
-
-Thay `USERNAME/REPOSITORY` bằng đường dẫn repository GitHub của bạn. Nếu repository đã có sẵn remote, không chạy lại lệnh `git remote add origin`; hãy dùng `git remote -v` để kiểm tra.
+## Nộp bài
+Mở trang bằng Chrome, chụp ảnh thấy khối nội dung và thanh cuộn, rồi tải ảnh lên biểu mẫu nộp bài.

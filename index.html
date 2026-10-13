@@ -3,104 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ Giản Lược</title>
+  <title>Quản lý nội dung bị tràn với Overflow</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="brand">Trang Chủ</div>
-    <nav class="top-nav" aria-label="Điều hướng chính">
-      <a href="#home">Trang chủ</a>
-      <a href="#about">Giới thiệu</a>
-      <a href="#news">Tin tức</a>
-      <a href="#contact">Liên hệ</a>
-    </nav>
+  <header class="page-header">
+    <h1>[Thực hành] Quản lý nội dung bị tràn với Overflow</h1>
   </header>
 
-  <div class="page-container" id="home">
-    <aside class="sidebar left-sidebar">
-      <h2>Danh mục</h2>
+  <main class="container">
+    <section class="intro">
+      <h2>Mục đích</h2>
+      <p>Luyện tập sử dụng <strong>overflow</strong> để kiểm soát nội dung bị tràn trong một khối HTML.</p>
+      <h2>Bài toán</h2>
+      <p>Tạo một khối chứa nội dung quá dài, sử dụng <code>overflow</code> để hiển thị thanh cuộn khi cần thiết.</p>
+    </section>
+
+    <section class="exercise">
+      <h2>Bước 1: Tạo cấu trúc tài liệu HTML</h2>
+      <p class="hint">Khối nội dung bên dưới có chiều cao giới hạn. Hãy thử cuộn bên trong khối.</p>
+      <div class="overflow-box" tabindex="0" aria-label="Khối nội dung có thanh cuộn">
+        <h3>Nội dung minh họa</h3>
+        <p>Đây là một đoạn văn bản dài để kiểm tra cách thuộc tính overflow hoạt động trong CSS. Khi nội dung cao hơn vùng chứa, thanh cuộn sẽ xuất hiện để người dùng xem được toàn bộ nội dung.</p>
+        <p>HTML giúp xây dựng cấu trúc trang web, còn CSS giúp trình bày giao diện. Thuộc tính overflow cho phép kiểm soát phần nội dung vượt ra ngoài kích thước của một phần tử.</p>
+        <p>Với giá trị auto, trình duyệt chỉ hiển thị thanh cuộn khi nội dung thực sự bị tràn. Đây là lựa chọn hữu ích cho hộp thông báo, danh sách dài hoặc khu vực xem nội dung.</p>
+        <p>Hãy tiếp tục cuộn để đọc đoạn cuối. Nội dung dài được thêm vào có chủ đích nhằm làm xuất hiện thanh cuộn dọc trong khối này.</p>
+        <p>Kết thúc nội dung minh họa. Bạn đã thực hành cách sử dụng overflow: auto để quản lý nội dung bị tràn.</p>
+      </div>
+
+      <h2>Bước 2: Định dạng CSS</h2>
+      <pre><code>.overflow-box {
+  width: 100%;
+  max-width: 620px;
+  height: 180px;
+  padding: 16px;
+  background-color: #f0efff;
+  border: 1px solid #d8d2ff;
+  overflow: auto;
+}</code></pre>
+      <p class="result"><strong>📌 Kết quả mong đợi:</strong> Thanh cuộn xuất hiện khi nội dung vượt quá kích thước phần tử nhờ <code>overflow: auto;</code>.</p>
+    </section>
+
+    <section class="submit-guide">
+      <h2>Hướng dẫn nộp bài</h2>
       <ul>
-        <li><a href="#home">Tổng quan</a></li>
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#news">Bài viết mới</a></li>
-        <li><a href="#resources">Tài nguyên</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
+        <li>Hoàn thành bài thực hành sử dụng <code>overflow</code> để xử lý nội dung bị tràn.</li>
+        <li>Kiểm tra thanh cuộn xuất hiện khi nội dung vượt quá kích thước phần tử.</li>
+        <li>Chụp ảnh kết quả hiển thị trên trình duyệt để nộp bài.</li>
       </ul>
-    </aside>
+    </section>
+  </main>
 
-    <main class="main-content">
-      <section class="welcome-card">
-        <p class="eyebrow">CHÀO MỪNG BẠN</p>
-        <h1>Trang chủ giản lược</h1>
-        <p>Đây là giao diện trang chủ mẫu sử dụng HTML5, CSS và Flexbox. Header được cố định ở đầu cửa sổ trình duyệt, hai sidebar nằm ở hai bên và nội dung chính được bố trí ở giữa.</p>
-        <a class="primary-button" href="#about">Tìm hiểu thêm</a>
-      </section>
-
-      <section class="content-section" id="about">
-        <h2>Giới thiệu</h2>
-        <p>Bố cục này minh họa cách chia một trang web thành các khu vực rõ ràng, giúp người dùng dễ dàng điều hướng và đọc nội dung.</p>
-        <div class="info-grid">
-          <article class="info-card">
-            <span class="card-icon">⌘</span>
-            <h3>Cấu trúc rõ ràng</h3>
-            <p>Sử dụng các thẻ ngữ nghĩa như <code>header</code>, <code>main</code> và <code>aside</code>.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-icon">▤</span>
-            <h3>Bố cục linh hoạt</h3>
-            <p>Flexbox giúp sắp xếp sidebar và nội dung chính theo hàng ngang.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-icon">↑</span>
-            <h3>Header cố định</h3>
-            <p>Header luôn hiển thị khi cuộn trang nhờ <code>position: fixed</code>.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="news">
-        <h2>Nội dung chính</h2>
-        <article class="post">
-          <h3>Thiết kế giao diện đơn giản</h3>
-          <p>Giao diện sử dụng màu nền nhẹ, khoảng trắng hợp lý, đường viền bo tròn và đổ bóng tinh tế để tăng khả năng đọc.</p>
-          <span class="post-meta">Bài viết mẫu · 5 phút đọc</span>
-        </article>
-        <article class="post">
-          <h3>Sử dụng CSS hiện đại</h3>
-          <p>Các thuộc tính <code>position: fixed</code>, <code>z-index</code>, <code>display: flex</code> và media query được áp dụng để hoàn thiện bố cục.</p>
-          <span class="post-meta">Hướng dẫn · 3 phút đọc</span>
-        </article>
-      </section>
-
-      <section class="content-section" id="resources">
-        <h2>Tài nguyên</h2>
-        <p>Bạn có thể thay đổi nội dung, màu sắc, liên kết và các thẻ thông tin để phù hợp với yêu cầu bài tập của mình.</p>
-      </section>
-
-      <section class="content-section" id="contact">
-        <h2>Liên hệ</h2>
-        <p>Email: contact@example.com</p>
-        <p>Đây là thông tin liên hệ minh họa, có thể thay bằng thông tin của bạn.</p>
-      </section>
-      <footer class="page-footer">© 2026 Trang Chủ Giản Lược · Bài thực hành HTML & CSS</footer>
-    </main>
-
-    <aside class="sidebar right-sidebar">
-      <h2>Thông tin thêm</h2>
-      <div class="side-note">
-        <strong>📌 Lưu ý</strong>
-        <p>Header luôn nằm trên cùng khi cuộn trang.</p>
-      </div>
-      <div class="side-note">
-        <strong>💡 Mẹo CSS</strong>
-        <p>Dùng <code>z-index</code> để kiểm soát thứ tự hiển thị.</p>
-      </div>
-      <div class="side-note">
-        <strong>📚 Tài liệu</strong>
-        <p>Ôn tập Flexbox và thuộc tính position.</p>
-      </div>
-    </aside>
-  </div>
+  <footer>© 2026 — Bài thực hành HTML &amp; CSS</footer>
 </body>
 </html>
